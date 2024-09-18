@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 export default function App() {
 
@@ -26,7 +27,28 @@ export default function App() {
   return (
         <div className="full-page">
             
-            
+            <header className="header">
+
+                <div className="container">
+
+                    <Link className="logo">
+                        <img src="./images/logo.png" alt="" />
+                        <h3>Schiphol</h3>
+                    </Link>
+
+                    <div>
+                        <NavLink to={'/'}>Anasayfa</NavLink>
+                        <NavLink to={'ucuslarim'}>Uçuşlarım</NavLink>
+                        <p>&nbsp;</p>
+                        <div className="user">
+                            <img src="https://randomuser.me/api/portraits/men/40.jpg" alt="" />
+                            <p>Yasir Alakuş</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
 
         </div>
   );

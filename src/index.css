@@ -39,12 +39,70 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* hazır kodlarım */
 
+.active {
+    color: #000 !important;
+    text-decoration: underline;
+}
+
 .full-page {
     width: 100%;
     min-height: 100vh;
+    background-color: #ebebeb;
+    padding: 32px;
 }
 
 .container {
     width: 1200px;
     margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    > img {
+        height: 70px;
+    }
+    > h3 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #000;
+        line-height: 1;
+    }
+}
+
+.header {
+    > .container {
+        padding: 32px;
+        border-radius: 16px;
+        border: 1px dashed #000;
+        display: flex;
+        justify-content: space-between;
+        > div {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            > a {
+                color: rgba(0,0,0,0.5);
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    > img {
+        height: 40px;
+        border-radius: 50%;
+    }
+    > p {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
 }

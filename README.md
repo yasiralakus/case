@@ -1,0 +1,1 @@
+# Proje temeli hazırlandı.

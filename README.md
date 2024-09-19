@@ -1,3 +1,4 @@
-# Proje temeli hazırlandı.
+# Projeyi yaparken;
 
-# Header kısmı tamamlandı. Anasayfa ve Uçuşlarım sayfası eklendi.
+# https://aviationstack.com/ sitesi API hizmetinden yararlandım.
+# React Router kullandım.

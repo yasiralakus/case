@@ -1,28 +1,11 @@
-import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { createContext, useState } from "react";
+import { Link, NavLink, Outlet } from "react-router-dom";
+
+export const DataContext = createContext();
 
 export default function App() {
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //       const response = await fetch(
-    //         "https://cors.bridged.cc/https://api.schiphol.nl/public-flights/destinations/SPC",
-    //         {
-    //           headers: {
-    //             "Accept": "application/json",
-    //             "ResourceVersion": "v4",
-    //             "app_id": "b926634a",
-    //             "app_key": "82212705f6f10e1746073a645dc7bb57"
-    //           }
-    //         }
-    //       );
-      
-    //       const data = await response.json();
-    //       console.log(data);
-    //     };
-      
-    //     fetchData();
-    //   }, []);
+    const [myTickets, setMyTickets] = useState([]);
 
   return (
         <div className="full-page">
@@ -33,7 +16,7 @@ export default function App() {
 
                     <Link className="logo">
                         <img src="./images/logo.png" alt="" />
-                        <h3>Schiphol</h3>
+                        <h3>Bilet <br /> Fırsatı.com</h3>
                     </Link>
 
                     <div>
@@ -49,6 +32,33 @@ export default function App() {
                 </div>
 
             </header>
+
+            <main className="main">
+
+                <div className="container">
+
+                    <div className="content-area">
+
+                        <DataContext.Provider value={{myTickets, setMyTickets}}>
+
+                        <Outlet />
+
+                        </DataContext.Provider>
+
+                    </div>
+
+                    <div className="ad-area">
+
+                        <Link><img src="./images/ad/ad1.jpg" alt="" /></Link>
+                        <Link><img src="./images/ad/ad2.jpg" alt="" /></Link>
+                        <Link><img src="./images/ad/ad3.jpg" alt="" /></Link>
+                        <Link><img src="./images/ad/ad4.jpg" alt="" /></Link>
+                        
+                    </div>
+
+                </div>
+
+            </main>
 
         </div>
   );
